@@ -3,6 +3,7 @@ import { RouterModule } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
 import { CascadeSelect } from 'primeng/cascadeselect';
 import { Timeline } from 'primeng/timeline';
+import { ThemeService } from './theme.service';
 @Component({
   imports: [ CascadeSelect, RouterModule, ButtonModule, Timeline],
   selector: 'app-root',
@@ -12,6 +13,8 @@ import { Timeline } from 'primeng/timeline';
 export class AppComponent implements OnInit  {
   title = 'poc-primeng';
   isSidebarOpen = false;
+  constructor(public themeService: ThemeService) {}
+
   events = [
     { status: 'Ordered', date: '15/10/2020 10:30', icon: 'pi pi-shopping-cart', color: '#9C27B0', image: 'game-controller.jpg' },
     { status: 'Processing', date: '15/10/2020 14:00', icon: 'pi pi-cog', color: '#673AB7' },

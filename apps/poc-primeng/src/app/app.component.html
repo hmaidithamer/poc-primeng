@@ -1,7 +1,7 @@
 <div class="flex flex-col min-h-screen">
   <!-- Header -->
-  <header class="bg-sky-600 text-white p-4 flex justify-between items-center">
-    <h1 class="text-xl font-bold">Mon App</h1>
+  <header class="p-4 flex justify-between items-center">
+    <h1 class="text-xl font-bold text-white">Mon App</h1>
     <button class="md:hidden" (click)="toggleSidebar()">
       <!-- Hamburger Icon -->
       <svg
@@ -21,7 +21,7 @@
   <div class="flex flex-1">
     <!-- Sidebar -->
     <aside
-      class="bg-white w-64 p-4 border-r hidden md:block"
+      class=" bg-dark w-64 p-4 border-r hidden md:block"
       [class.block]="isSidebarOpen"
     >
       <nav class="space-y-2">
@@ -36,8 +36,9 @@
     </aside>
 
     <!-- Main -->
-    <main class="flex-1 p-6 bg-gray-50">
-      <h2 class="text-2xl font-semibold mb-4">Bienvenue</h2>
+    <main class="flex-1 p-6 bg-white dark:bg-black"   >
+      <p class="text-3xl pb-2 text-primary">Bienvenue</p>
+      <button class="bg-primary"> reeec</button>
       <div
         class="flex items-center gap-4 rounded-lg bg-white p-6 shadow-md outline outline-black/5 dark:bg-gray-800"
       >
@@ -75,7 +76,9 @@
         <div class="bg-sky-950" style="height: 20px; width: 20px"></div>
       </div>
 
-
+      <button class="bg-primary hover:bg-primary-light text-white font-semibold py-2 px-4 rounded">
+        Se connecter
+      </button>
       <div class="card flex justify-center">
         <p-timeline [value]="events">
             <ng-template #content let-event>
